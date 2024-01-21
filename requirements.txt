@@ -4,7 +4,7 @@ transformers
 datasets
 soundfile
 simple-parsing
-torch==1.10.0
+torch==1.11.0
 pytorch-lightning
 torchaudio
 phonemizer
@@ -12,3 +12,5 @@ rich
 librosa
 wget
 lightning-bolts
+pytorch-lightning==1.6.5
+torchmetrics==0.6.0
