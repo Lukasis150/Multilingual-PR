@@ -3,7 +3,7 @@ pytest==7.1.1
 transformers==4.14.1
 datasets==1.16.1
 soundfile==0.10.3.post1
-simple-parsing==0.8.0
+simple-parsing==0.0.18
 torch==1.10.0
 pytorch-lightning==1.5.10
 torchaudio==0.10.0
