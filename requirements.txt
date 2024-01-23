@@ -7,7 +7,7 @@ simple-parsing==0.0.18
 torch==1.10.0
 pytorch-lightning==1.5.10
 torchaudio==0.10.0
-phonemizer==0.12.0
+phonemizer==3.0.1
 rich==11.2.0
 librosa==0.8.1
 wget==3.2
