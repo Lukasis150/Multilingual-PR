@@ -11,4 +11,4 @@ phonemizer==3.0.1
 rich==11.2.0
 librosa==0.8.1
 wget==3.2
-lightning-bolts==0.6.0
+lightning-bolts==0.5.0
