@@ -5,10 +5,10 @@ datasets==2.0.0
 soundfile==0.10.3.post1
 simple-parsing==0.0.19.post0
 torch==1.11.0
-pytorch-lightning==1.7.0
+pytorch-lightning==1.6.5
 torchaudio==0.11.0
 phonemizer==3.2.1
 rich==13.0.0
 librosa==0.9.1
 wget==3.2
-lightning-bolts==0.6.0.post1
+lightning-bolts==0.7.0
