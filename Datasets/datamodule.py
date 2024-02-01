@@ -114,14 +114,11 @@ class BaseDataModule(LightningDataModule):
                     [
                         "client_id",
                         "age",
-                        "audio",
                         "down_votes",
                         "gender",
                         "locale",
                         "segment",
                         "up_votes",
-                        "sentence",
-                        "accent",
                     ]
                 ),
             )
