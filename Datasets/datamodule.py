@@ -100,6 +100,7 @@ class BaseDataModule(LightningDataModule):
                         "segment",
                         "up_votes",
                         "accent",
+                        "variant",
                     ]
                 ),
             )
