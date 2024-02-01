@@ -89,11 +89,7 @@ class BaseDataModule(LightningDataModule):
             #         f"Loaded {split} dataset : {name_file_path}")
             # else:
             # except
-            print(self.config.dataset_name)
-            print(self.config.subset)
-            print(self.config.use_auth_token)
-            print(self.config.download_mode)
-            print(self.config.cache_dir)
+
             setattr(
                 self,
                 name_dataset,
