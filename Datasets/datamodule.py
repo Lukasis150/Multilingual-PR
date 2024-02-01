@@ -2,6 +2,7 @@ import os.path as osp
 import pickle
 import re
 import shutil
+import os
 
 import numpy as np
 import utils.agent_utils as ag_u
@@ -20,6 +21,8 @@ from utils.logger import init_logger
 class BaseDataModule(LightningDataModule):
     def __init__(self, dataset_param):
         super().__init__()
+
+        self.HUGGING_FACE_ACCESS_TOKEN = os.getenv('HUGGING_FACE_ACCESS_TOKEN')
 
         self.config = dataset_param
         self.logger = init_logger("BaseDataModule", "INFO")
@@ -98,7 +101,7 @@ class BaseDataModule(LightningDataModule):
                     self.config.dataset_name,
                     self.config.subset,
                     split=split if split != "val" else "validation",
-                    use_auth_token=self.config.use_auth_token,
+                    use_auth_token=self.HUGGING_FACE_ACCESS_TOKEN,
                     download_mode=self.config.download_mode,
                     cache_dir=self.config.cache_dir,
                 ),
@@ -109,14 +112,16 @@ class BaseDataModule(LightningDataModule):
                 name_dataset,
                 getattr(self, name_dataset).remove_columns(
                     [
-                        "accent",
-                        "age",
                         "client_id",
+                        "age",
+                        "audio",
                         "down_votes",
                         "gender",
                         "locale",
                         "segment",
                         "up_votes",
+                        "sentence",
+                        "accent",
                     ]
                 ),
             )
