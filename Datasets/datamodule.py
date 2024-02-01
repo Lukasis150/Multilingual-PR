@@ -119,6 +119,7 @@ class BaseDataModule(LightningDataModule):
                         "locale",
                         "segment",
                         "up_votes",
+                        "accent",
                     ]
                 ),
             )
