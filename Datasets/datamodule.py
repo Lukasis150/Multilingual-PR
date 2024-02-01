@@ -22,8 +22,6 @@ class BaseDataModule(LightningDataModule):
     def __init__(self, dataset_param):
         super().__init__()
 
-        self.HUGGING_FACE_ACCESS_TOKEN = os.getenv('HUGGING_FACE_ACCESS_TOKEN')
-
         self.config = dataset_param
         self.logger = init_logger("BaseDataModule", "INFO")
         self.logger.info(
@@ -97,7 +95,7 @@ class BaseDataModule(LightningDataModule):
                     self.config.dataset_name,
                     self.config.subset,
                     split=split if split != "val" else "validation",
-                    use_auth_token=self.HUGGING_FACE_ACCESS_TOKEN,
+                    use_auth_token=False,
                     download_mode=self.config.download_mode,
                     cache_dir=self.config.cache_dir,
                 ),
