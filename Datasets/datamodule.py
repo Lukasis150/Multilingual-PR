@@ -28,20 +28,6 @@ class BaseDataModule(LightningDataModule):
             f"Loading Dataset : {self.config.dataset_name}, language : {self.config.subset}"
         )
 
-        # dataset_config = {
-        #     "LOADING_SCRIPT_FILES": os.path.join(PROJECT_ROOT, "crema.py"),
-        #     "CONFIG_NAME": "clean",
-        #     "DATA_DIR": os.path.join(PROJECT_ROOT, "data/archive.zip"),
-        #     "CACHE_DIR": os.path.join(PROJECT_ROOT, "cache_crema"),
-        # }
-
-        # ds = load_dataset(
-        #     dataset_config["LOADING_SCRIPT_FILES"],
-        #     dataset_config["CONFIG_NAME"],
-        #     data_dir=dataset_config["DATA_DIR"],
-        #     cache_dir=dataset_config["CACHE_DIR"]
-        # )
-
     def prepare_data(self) -> None:
         return super().prepare_data()
 
